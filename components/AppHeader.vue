@@ -1,28 +1,60 @@
+
+
 <template>
-  <div>
-    <!-- -----------------------------------------------
-          Start Header
-    ----------------------------------------------- -->
-    <v-app-bar
-      :elevation="2"
-      rounded
-      class="app-header position-relative navbar-light header1"
-      flat
-    />
-    <!-- -----------------------------------------------
-          End Header
-    ----------------------------------------------- -->
-  </div>
+  <v-app-bar
+    app
+  >
+    <AppLogo />
+    <v-spacer />
+    <!-- <v-spacer /> -->
+    <div class="menuItems">
+      <v-btn>
+        <nuxt-link
+          to="/register"
+          class="menuItem"
+        >
+          register
+        </nuxt-link>
+      </v-btn>
+      <v-btn>
+        <nuxt-link
+          to="/login"
+          class="menuItem"
+        >
+          login
+        </nuxt-link>
+      </v-btn>
+      <v-btn>
+        <nuxt-link
+          to="/"
+          class="menuItem"
+        >
+          Budget
+        </nuxt-link>
+      </v-btn>
+      <v-btn>
+        <nuxt-link
+          to="/"
+          class="menuItem"
+        >
+          Expenses
+        </nuxt-link>
+      </v-btn>
+    </div>
+  </v-app-bar>
 </template>
 
 <script setup>
-import logo from '~/assets/images/logos/purple-logo.png';
-// import image from '~/assets/images/img3.jpg';
-  // const name="Header1"
-
-  let isActive = false
- 
-  const toggleClass = (event) => {
-    isActive = !isActive;
-  }
 </script>
+
+<style lang="scss">
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  .menuItem {
+    text-decoration: none;
+  }
+}
+
+</style>

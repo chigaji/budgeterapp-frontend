@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <v-app>
-        <AppHeader />
+  <div class="main">
+    <!-- <NuxtLayout> -->
+    <v-app>
+      <AppHeader />
+      <v-main class="content">
         <NuxtPage />
-      </v-app>
-    </NuxtLayout>
+      </v-main>
+    </v-app>
+    <!-- </NuxtLayout> -->
   </div>
 </template> 
 <style>
@@ -20,4 +22,12 @@
   transform: rotate3d(1, 1, 1, 15deg);
   /* filter: blur(1rem); */
 }
+.main {
+  /* background-color: blue; */
+  /* background-color: white; */
+}
+.content {
+  margin-top: 50px;
+}
+
 </style>

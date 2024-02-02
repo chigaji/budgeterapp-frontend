@@ -1,9 +1,5 @@
 <template lang="">
-  <div>
-    <span>
-      <slot />
-    </span>
-  </div>
+  <div />
 </template>
 <script>
 export default {
